@@ -4,5 +4,11 @@ COPY entrypoint.sh /
 
 RUN apk add mysql-client rsync && \
     chmod +x /entrypoint.sh
+    
+    
+# install s3 tools
+RUN apk add python py-pip && \
+    pip install awscli && \
+    apk del py-pip
 
 ENTRYPOINT ["/entrypoint.sh"]
