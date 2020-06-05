@@ -7,7 +7,7 @@ RUN apk add mysql-client rsync && \
     
     
 # install s3 tools
-RUN apk add python py-pip && \
+RUN apk add python py-pip groff && \
     pip install awscli && \
     apk del py-pip
 
