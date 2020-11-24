@@ -10,4 +10,4 @@ Useful for mysqldump
 
 ## Docker image
 
-<https://hub.docker.com/r/monotek/gcloud-mysql>
+<https://quay.io/repository/monotek/gcloud-mysql>
