@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  main:
+  docker-build-push:
     runs-on: ubuntu-20.04
     steps:
       - name: Set up QEMU
