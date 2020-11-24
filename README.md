@@ -10,4 +10,4 @@ Useful for mysqldump in container environments like [Googles Kubernetes Engine](
 
 ## Docker image
 
-Docker image cann be found on [quai.io](https://quay.io/repository/monotek/gcloud-mysql).
+Docker image can be found on [quai.io](https://quay.io/repository/monotek/gcloud-mysql).
