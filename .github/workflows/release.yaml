@@ -28,7 +28,7 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            monotek/gcloud-mysql:master-${GITHUB_RUN_ID}
+            monotek/gcloud-mysql:master-$GITHUB_RUN_ID
             monotek/gcloud-mysql:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
