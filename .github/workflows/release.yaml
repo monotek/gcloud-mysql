@@ -25,7 +25,7 @@ jobs:
         with:
           push: true
           tags: |
-            monotek/gcloud-mysql:master-${{ github.run_number }}
-            monotek/gcloud-mysql:latest
+            quay.io/monotek/gcloud-mysql:master-${{ github.run_number }}
+            quay.io/monotek/gcloud-mysql:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
