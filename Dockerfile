@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:319.0.0-alpine
+FROM google/cloud-sdk:320.0.0-alpine
 
 ARG MYSQL_CLIENT_VERSION=10.4.15-r0
 ARG RSYNC_VERSION=3.1.3-r2
