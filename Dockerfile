@@ -1,7 +1,7 @@
-FROM google/cloud-sdk:344.0.0-alpine
+FROM google/cloud-sdk:368.0.0-alpine
 
-ARG MYSQL_CLIENT_VERSION=10.5.9-r0
-ARG RSYNC_VERSION=3.2.3-r1
+ARG MYSQL_CLIENT_VERSION=10.5.13-r0
+ARG RSYNC_VERSION=3.2.3-r4
 
 COPY entrypoint.sh /
 
