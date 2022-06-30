@@ -1,11 +1,9 @@
-FROM google/cloud-sdk:368.0.0-alpine
-
-ARG MYSQL_CLIENT_VERSION=10.5.13-r0
-ARG RSYNC_VERSION=3.2.3-r4
+FROM google/cloud-sdk:392.0.0-alpine
 
 COPY entrypoint.sh /
 
-RUN apk add --no-cache mysql-client=$MYSQL_CLIENT_VERSION rsync=${RSYNC_VERSION} && \
+# hadolint ignore=DL3018
+RUN apk add --no-cache mysql-client rsync && \
     rm -rf /var/cache/apk/* && \
     chmod +x /entrypoint.sh
 
