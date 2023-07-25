@@ -2,6 +2,7 @@
 
 Alpine linux based Docker image which contains the following tools:
 
+* aws cli
 * gcloud sdk
 * mysql client
 * rsync
