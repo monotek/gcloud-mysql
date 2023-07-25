@@ -1,9 +1,10 @@
-FROM google/cloud-sdk:392.0.0-alpine
+FROM google/cloud-sdk:439.0.0-alpine
 
 COPY entrypoint.sh /
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache mysql-client rsync && \
+RUN apk add --no-cache mysql-client py3-pip rsync && \
+    pip3 install --no-cache-dir awscli && \
     rm -rf /var/cache/apk/* && \
     chmod +x /entrypoint.sh
 
