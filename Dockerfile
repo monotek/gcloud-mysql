@@ -7,6 +7,8 @@ RUN apk add --no-cache aws-cli mysql-client rsync && \
     rm -rf /var/cache/apk/* && \
     chmod +x /entrypoint.sh
 
+#checkov:skip=CKV_DOCKER_2:We don't need Docker HEALTHCHECK in Kubernetes
+
 USER cloudsdk
 
 ENTRYPOINT ["/entrypoint.sh"]
