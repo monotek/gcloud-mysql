@@ -1,11 +1,15 @@
 ---
 name: dependabot-auto-merge
 
+permissions: read-all
+
 on:
   pull_request:
 
 jobs:
   auto-merge:
+    permissions:
+      contents: write
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
