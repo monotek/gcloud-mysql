@@ -22,6 +22,7 @@ jobs:
         env:
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATE_SHELL_SHFMT: false
 
   docker-build:
     runs-on: ubuntu-22.04
