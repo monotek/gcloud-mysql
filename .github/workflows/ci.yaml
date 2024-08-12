@@ -42,3 +42,19 @@ jobs:
         with:
           platforms: linux/amd64
           push: false
+
+  dependabot-auto-merge:
+    needs:
+      - docker-build
+      - super-linter
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-22.04
+    if: github.actor == 'dependabot[bot]'
+    steps:
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --merge "$PR_URL"
+        env:
+          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
