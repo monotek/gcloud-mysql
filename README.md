@@ -11,4 +11,8 @@ Useful for mysqldump in container environments like [Googles Kubernetes Engine](
 
 ## Docker image
 
-Docker image can be found on [quai.io](https://quay.io/repository/monotek/gcloud-mysql).
+Docker image is pushed to ghcr.io
+
+## Helm chart
+
+<https://github.com/kokuwaio/helm-charts/tree/main/charts/mysqldump>

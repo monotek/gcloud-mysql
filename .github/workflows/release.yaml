@@ -32,8 +32,7 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/monotek/gcloud-mysql
-            quay.io/monotek/gcloud-mysql
+            ghcr.io/kokuwaio/gcloud-mysql
           tags: |
             type=ref,event=branch
             type=ref,event=tag
@@ -47,13 +46,6 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Login to quay.io container registry
-        uses: docker/login-action@v3
-        with:
-          registry: quay.io
-          username: ${{ secrets.QUAY_USER }}
-          password: ${{ secrets.QUAY_TOKEN }}
 
       - name: Build and push
         id: docker_build
